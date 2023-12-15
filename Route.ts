@@ -58,7 +58,7 @@ route.post("/api/users/me", async (req: Request, res: Response) => {
   }
 });
 
-route.get("/api/random-joke", async (req: Request, res: Response) => {
+route.post("/api/random-joke", async (req: Request, res: Response) => {
   try {
     const response = await axios.get("https://api.chucknorris.io/jokes/random");
     return res.send(response.data);
